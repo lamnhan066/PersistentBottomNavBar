@@ -1,4 +1,4 @@
-part of persistent_bottom_nav_bar;
+part of '../persistent_tab_view.dart';
 
 class PersistentBottomNavBar extends StatelessWidget {
   const PersistentBottomNavBar({
@@ -219,6 +219,7 @@ class PersistentBottomNavBar extends StatelessWidget {
           hideNavigationBar: hideNavigationBar ?? this.hideNavigationBar,
           customNavBarWidget: customNavBarWidget ?? this.customNavBarWidget,
           onAnimationComplete:
+              // ignore: avoid_positional_boolean_parameters
               onAnimationComplete as dynamic Function(bool, bool)? ??
                   this.onAnimationComplete,
           navBarEssentials: navBarEssentials ?? this.navBarEssentials,

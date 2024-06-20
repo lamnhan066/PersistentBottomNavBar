@@ -1,4 +1,4 @@
-part of persistent_bottom_nav_bar;
+part of '../persistent_tab_view.dart';
 
 class BottomNavStyle14 extends StatefulWidget {
   const BottomNavStyle14({
@@ -8,7 +8,7 @@ class BottomNavStyle14 extends StatefulWidget {
   final NavBarEssentials? navBarEssentials;
 
   @override
-  _BottomNavStyle14State createState() => _BottomNavStyle14State();
+  State<BottomNavStyle14> createState() => _BottomNavStyle14State();
 }
 
 class _BottomNavStyle14State extends State<BottomNavStyle14>

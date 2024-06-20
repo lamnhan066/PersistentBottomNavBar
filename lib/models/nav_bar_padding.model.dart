@@ -1,4 +1,4 @@
-part of persistent_bottom_nav_bar;
+part of '../persistent_tab_view.dart';
 
 class NavBarPadding {
   const NavBarPadding.only({this.top, this.bottom, this.right, this.left});

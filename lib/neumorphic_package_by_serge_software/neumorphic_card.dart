@@ -1,6 +1,6 @@
 /// Based on the code by Ivan Cherepanov
 /// https://medium.com/flutter-community/neumorphic-designs-in-flutter-eab9a4de2059
-part of persistent_bottom_nav_bar;
+part of '../persistent_tab_view.dart';
 
 enum CurveType {
   concave,
@@ -54,7 +54,7 @@ class NeumorphicContainer extends StatelessWidget {
 
   @override
   Widget build(final BuildContext context) {
-    final color = decoration.color ?? Theme.of(context).backgroundColor;
+    final color = decoration.color ?? Theme.of(context).scaffoldBackgroundColor;
     final emboss = curveType == CurveType.emboss;
 
     Color colorValue = color;

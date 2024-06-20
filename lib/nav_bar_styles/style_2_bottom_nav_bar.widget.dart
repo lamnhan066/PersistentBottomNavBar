@@ -1,4 +1,4 @@
-part of persistent_bottom_nav_bar;
+part of '../persistent_tab_view.dart';
 
 class BottomNavStyle2 extends StatelessWidget {
   const BottomNavStyle2({

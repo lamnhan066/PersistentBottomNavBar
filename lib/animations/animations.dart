@@ -1,4 +1,4 @@
-part of persistent_bottom_nav_bar;
+part of '../persistent_tab_view.dart';
 
 class OffsetAnimation extends StatefulWidget {
   const OffsetAnimation(
@@ -16,7 +16,7 @@ class OffsetAnimation extends StatefulWidget {
   final Function(bool, bool)? onAnimationComplete;
 
   @override
-  _OffsetAnimationState createState() => _OffsetAnimationState();
+  State<OffsetAnimation> createState() => _OffsetAnimationState();
 }
 
 class _OffsetAnimationState extends State<OffsetAnimation>

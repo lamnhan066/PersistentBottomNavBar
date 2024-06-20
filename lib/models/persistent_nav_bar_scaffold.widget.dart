@@ -1,4 +1,4 @@
-part of persistent_bottom_nav_bar;
+part of '../persistent_tab_view.dart';
 
 ///Navigation bar controller for `PersistentTabView`.
 class PersistentTabController extends ChangeNotifier {
@@ -78,7 +78,7 @@ class PersistentTabScaffold extends StatefulWidget {
   final bool animatePadding;
 
   @override
-  _PersistentTabScaffoldState createState() => _PersistentTabScaffoldState();
+  State<PersistentTabScaffold> createState() => _PersistentTabScaffoldState();
 }
 
 class _PersistentTabScaffoldState extends State<PersistentTabScaffold> {
@@ -231,7 +231,8 @@ class _PersistentTabScaffoldState extends State<PersistentTabScaffold> {
         children: <Widget>[
           content,
           MediaQuery(
-            data: existingMediaQuery.copyWith(textScaleFactor: 1),
+            data: existingMediaQuery.copyWith(
+                textScaler: const TextScaler.linear(1)),
             child: Align(
               alignment: Alignment.bottomCenter,
               child: widget.tabBar.copyWith(

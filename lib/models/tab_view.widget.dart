@@ -1,4 +1,4 @@
-part of persistent_bottom_nav_bar;
+part of '../persistent_tab_view.dart';
 
 class CustomTabView extends StatefulWidget {
   const CustomTabView({
@@ -10,7 +10,7 @@ class CustomTabView extends StatefulWidget {
   final RouteAndNavigatorSettings? routeAndNavigatorSettings;
 
   @override
-  _CustomTabViewState createState() => _CustomTabViewState();
+  State<CustomTabView> createState() => _CustomTabViewState();
 }
 
 class _CustomTabViewState extends State<CustomTabView> {

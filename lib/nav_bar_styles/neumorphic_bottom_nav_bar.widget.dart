@@ -1,4 +1,4 @@
-part of persistent_bottom_nav_bar;
+part of '../persistent_tab_view.dart';
 
 class NeumorphicBottomNavBar extends StatelessWidget {
   const NeumorphicBottomNavBar({
@@ -79,9 +79,7 @@ class NeumorphicBottomNavBar extends StatelessWidget {
                             ? 15.0
                             : neumorphicProperties!.borderRadius),
                     color: navBarEssentials!.backgroundColor,
-                    border: neumorphicProperties == null
-                        ? null
-                        : neumorphicProperties!.border,
+                    border: neumorphicProperties?.border,
                     shape: neumorphicProperties == null
                         ? BoxShape.rectangle
                         : neumorphicProperties!.shape,

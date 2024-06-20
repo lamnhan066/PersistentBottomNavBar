@@ -3,7 +3,7 @@
 
 // ignore_for_file: overridden_fields
 
-part of persistent_bottom_nav_bar;
+part of '../persistent_tab_view.dart';
 
 ///A highly customizable persistent navigation bar for flutter.
 ///
@@ -339,7 +339,7 @@ class PersistentTabViewBase extends StatefulWidget {
   final Function(BuildContext)? selectedTabScreenContext;
 
   @override
-  _PersistentTabViewState createState() => _PersistentTabViewState();
+  State<PersistentTabView> createState() => _PersistentTabViewState();
 }
 
 class _PersistentTabViewState extends State<PersistentTabView> {
@@ -684,8 +684,8 @@ class _PersistentTabViewState extends State<PersistentTabView> {
     }
 
     if (widget.handleAndroidBackButtonPress || widget.onWillPop != null) {
-      return WillPopScope(
-        onWillPop: !widget.handleAndroidBackButtonPress &&
+      return PopScope(
+        onPopInvoked: (pop) => !widget.handleAndroidBackButtonPress &&
                 widget.onWillPop != null
             ? widget.onWillPop!(_contextList[_controller!.index])
                 as Future<bool> Function()?

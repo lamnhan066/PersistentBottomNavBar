@@ -1,21 +1,21 @@
 import "package:flutter/material.dart";
 import "package:persistent_bottom_nav_bar/persistent_tab_view.dart";
 
-import "package:persistent_bottom_nav_bar_example_project/main.dart";
-import "package:persistent_bottom_nav_bar_example_project/screens.dart";
+import 'main.dart';
+import "screens.dart";
 
 class CustomWidgetExample extends StatefulWidget {
-  const CustomWidgetExample({final Key key, this.menuScreenContext})
+  const CustomWidgetExample({Key? key, required this.menuScreenContext})
       : super(key: key);
   final BuildContext menuScreenContext;
 
   @override
-  _CustomWidgetExampleState createState() => _CustomWidgetExampleState();
+  State<CustomWidgetExample> createState() => _CustomWidgetExampleState();
 }
 
 class _CustomWidgetExampleState extends State<CustomWidgetExample> {
-  PersistentTabController _controller;
-  bool _hideNavBar;
+  late PersistentTabController _controller;
+  late bool _hideNavBar;
 
   @override
   void initState() {
@@ -108,11 +108,11 @@ class _CustomWidgetExampleState extends State<CustomWidgetExample> {
   @override
   Widget build(final BuildContext context) => Scaffold(
         appBar: AppBar(title: const Text("Navigation Bar Demo")),
-        drawer: Drawer(
+        drawer: const Drawer(
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[
+              children: <Widget>[
                 Text("This is the Drawer"),
               ],
             ),
